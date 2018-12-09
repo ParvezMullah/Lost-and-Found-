@@ -28,5 +28,5 @@ from .views import(
 urlpatterns = [
     path('create/', LostAndFoundCreate.as_view(), name='create'),
     path('list/', LostAndFoundList.as_view(), name='create'),
-    path('<int:pk>/', LostAndFoundDetail.as_view(), name='detail'),   
+    path('details/<int:pk>/', LostAndFoundDetail.as_view(), name='detail'),   
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
